@@ -1,0 +1,173 @@
+body {
+    background-color: #263238;
+    color: #ECEFF1;
+    font-family: sans-serif;
+}
+
+h1, h2 {
+    color: #ECEFF1;
+}
+
+.outer-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    gap: 20px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 52px);
+    grid-template-rows: repeat(7, 52px);
+    gap: 0;
+    position: relative;
+    width: 312px;
+    height: 364px;
+    border: 2px solid #455A64;
+}
+
+.bonus-container {
+    padding: 5px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #455A64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #37474F;
+    position: relative;
+}
+
+.blocked {
+    background-color: #1B1B1B;
+    opacity: 0.8;
+}
+
+.idol {
+    cursor: grab;
+    background-color: #4DB6AC;
+    border: 1px solid #80CBC4;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    z-index: 1;
+    box-sizing: border-box;
+    user-select: none;
+    color: #1A1A1A;
+}
+
+.idol-creation {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.idol-creation label {
+    font-weight: bold;
+}
+
+.select-container {
+    position: relative;
+}
+
+.searchable-select {
+    width: 100%;
+    padding: 5px;
+    background-color: #455A64;
+    color: #ECEFF1;
+    border: 1px solid #546E7A;
+    border-radius: 4px;
+}
+
+.searchable-select::placeholder {
+    color: #90A4AE;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #37474F;
+    border: 1px solid #546E7A;
+    border-top: none;
+    z-index: 1000;
+    display: none;
+}
+
+.dropdown-option {
+    padding: 5px;
+    cursor: pointer;
+    color: #ECEFF1;
+}
+
+.dropdown-option:hover {
+    background-color: #546E7A;
+}
+
+.tooltip {
+    position: absolute;
+    background: #37474F;
+    border: 1px solid #546E7A;
+    color: #ECEFF1;
+    padding: 5px;
+    display: none;
+    z-index: 2;
+    max-width: 300px;
+}
+
+button {
+    background-color: #4DB6AC;
+    color: #1A1A1A;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #26A69A;
+}
+
+.drop-overlay {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 1000;
+    border: 2px solid #80CBC4;
+}
+
+.delete-area {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #E57373;
+    background-color: #37474F;
+    color: #ECEFF1;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.delete-area.drag-over {
+    background-color: #546E7A;
+    border-color: #EF5350;
+}

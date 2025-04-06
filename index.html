@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idol Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Idol Planner</h1>
+    <div class="outer-container">
+        <div class="left-side">
+            <div class="grid" id="grid" ondragover="handleDragOver(event)" 
+            ondrop="drop(event)"
+            style="position: relative;"></div>
+            <div class="idol-creation">
+                <div class="select-container">
+                    <label for="idol-size">Size:</label>
+                    <select id="idol-size" class="searchable-select">
+                        <option value="1x1">1x1</option>
+                        <option value="2x1">2x1</option>
+                        <option value="1x2">1x2</option>
+                        <option value="3x1">3x1</option>
+                        <option value="1x3">1x3</option>
+                        <option value="2x2">2x2</option>
+                    </select>
+                </div>
+                <div class="select-container">
+                    <label for="prefix1">Prefix 1:</label>
+                    <input type="text" id="prefix1" class="searchable-select" placeholder="Search or select prefix">
+                    <div class="dropdown-options" id="prefix1-options"></div>
+                </div>
+                <div class="select-container">
+                    <label for="prefix2">Prefix 2:</label>
+                    <input type="text" id="prefix2" class="searchable-select" placeholder="Search or select prefix">
+                    <div class="dropdown-options" id="prefix2-options"></div>
+                </div>
+                <div class="select-container">
+                    <label for="suffix1">Suffix 1:</label>
+                    <input type="text" id="suffix1" class="searchable-select" placeholder="Search or select suffix">
+                    <div class="dropdown-options" id="suffix1-options"></div>
+                </div>
+                <div class="select-container">
+                    <label for="suffix2">Suffix 2:</label>
+                    <input type="text" id="suffix2" class="searchable-select" placeholder="Search or select suffix">
+                    <div class="dropdown-options" id="suffix2-options"></div>
+                </div>
+                <button onclick="createIdol()">Create Idol</button>
+            </div>
+            <div id="delete-area" class="delete-area" ondragover="allowDrop(event)" ondrop="dropOnDeleteArea(event)">
+                Drag here to delete
+            </div>
+        </div>
+        <div class="bonus-container">
+            <h2>Total Bonuses</h2>
+            <div id="bonuses"></div>
+        </div>
+    </div>
+    <script src="mods-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
