@@ -2,7 +2,7 @@
 
 Optimize your Path of Exile Phrecia Event builds with this intuitive Idol Planner tool. Easily arrange Idols on the grid, select their modifiers (prefixes and suffixes), and instantly see the combined bonuses. Plan your perfect setup and share your layouts effortlessly!
 
-#Use it at: https://pritesh1g.github.io/phrecia-idol-planner/
+## Use it at: https://pritesh1g.github.io/phrecia-idol-planner/
 
 ## Features
 
